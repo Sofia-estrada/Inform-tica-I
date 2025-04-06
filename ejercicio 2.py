@@ -10,7 +10,7 @@ while c<a:
             print("Valor inválido, debe ingresar valores entre 0 y 5")
     c+=1
     sumanotas+=b
-promedio=sumanotas/a
+promedio=(sumanotas/a)
 print(f'El promedio de las notas es {promedio}')
 
     
