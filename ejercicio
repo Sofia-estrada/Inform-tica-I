@@ -1,0 +1,69 @@
+import datetime
+equipos={}
+marcas=set()
+def validar_opcion():
+    while True:
+        try:
+            opcion=int(input("Selecciona una opción: ")) 
+            return opcion 
+        except ValueError:
+            print("Error, ingrese un número entero")
+
+def validar_area():
+  while True:
+    try:
+      area=int(input("Selecciona una opción: "))
+      return area
+    except ValueError:
+        print("Error, ingrese un número entero")
+
+def validar_serial():
+  while True:
+    try:
+      serial=int(input("Serial: "))
+      return serial
+    except ValueError:
+        print("Error, ingrese un número entero")
+def validar_respuesta():
+    respuesta=input("Ingrese la opción: ").upper()
+    if respuesta not in ("B","S","I"):
+      print("No es válido, ingrese la letra adecuada")
+      return respuesta
+
+def ingresar_activo():
+  c=0
+  activos=[]
+  print("""¿A qué area pertenece el activo?
+        B. Biomédica
+        S. Sistemas
+        I. Infraestructura""")
+  respuesta= validar_respuesta()
+  area=validar_area()
+  nombre=input("Nombre: ")
+  marca=input("Marca: ")
+  serial=validar_serial()
+  fecha=print(f"Fecha: {datetime.date.today()}")
+  mant=input("Frecuencia de mantenimiento: ")
+  if respuesta=="B":
+    cal=input("Frecuencia de calibración: ")
+  num=print(f"Número de activo: {respuesta}-{datetime.date.today()}-{c}")
+
+
+
+  
+
+while True:
+  print(""" GESTIÓN INVENTARIO
+          1. Ingresar activo
+          2. Buscar activo
+          3. Modificar activo
+          4. Mostrar marcas de activo
+          5. Filtrar por fecha
+          6. Mapear y modificar
+          7. Salir""")
+  opcion=validar_opcion()
+  if opcion==1:
+    ingresar_activo()
+  elif opcion==7:
+    break
+    
