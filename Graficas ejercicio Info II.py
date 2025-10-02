@@ -25,7 +25,7 @@ ax1.set_title("Gráfico de Línea")
 ax1.legend()
 ax1.grid(True)
 
-ax2.scatter(range(len(fila)), fila, c='orange', label="Scatter")
+ax2.scatter(range(len(fila)), fila, c='black', label="Scatter")
 ax2.set_title("Diagrama de dispersión")
 ax2.legend()
 ax2.grid(True)
@@ -51,3 +51,4 @@ ax6.grid(True)
 plt.tight_layout()
 
 plt.show()
+
